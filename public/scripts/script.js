@@ -3,6 +3,13 @@ $(document).ready(function(){
   // load tasks
   loadTasks();
 
+  // target button with enter key
+  $('#taskIn').keypress(function(event){
+    if(event.keyCode == 13){
+      $('#addTaskButton').click();
+    }
+  }); // end target button
+
   // create new task object to send from input
   $('#addTaskButton').on('click', function(){
     console.log('addTaskButton clicked');
