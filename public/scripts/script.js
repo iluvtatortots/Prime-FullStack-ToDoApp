@@ -27,7 +27,7 @@ $(document).ready(function(){
     } // end if/else input check
   }); // end create new task object to send
 
-  // complete task
+  // mark tasks as complete
   $('#outputTable').on('click', '#completeButton', function(){
     console.log('completeButton clicked');
     var completeStatus = $(this).attr('data-status');
@@ -36,7 +36,8 @@ $(document).ready(function(){
       "status": completeStatus
     }; // end object
     $(this).closest('tr').css('opacity', '0.40');
-
+    $("#completedTable").append($(this).parent().parent());
+    $(this).remove();
     $.ajax({
       type: 'POST',
       url: '/completeTask',
@@ -82,7 +83,7 @@ $(document).ready(function(){
   function createOutput(tasksToDo){
     $('#outputTable').empty();
     $('#completedTable').empty();
-    for(var i=0; i<tasksToDo.length; i++){
+    for(i=0; i<tasksToDo.length; i++){
       var completeButton = '<button id="completeButton" data-id="'+ tasksToDo[i].id +'" data-status="'+ tasksToDo[i].status +'">complete</button>';
       var deleteButton = '<button id="deleteButton" data-id="'+ tasksToDo[i].id +'">delete</button></td>';
       if(tasksToDo[i].status === false) {
