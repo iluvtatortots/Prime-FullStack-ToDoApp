@@ -5,14 +5,29 @@
     <title>To Do Application</title>
     <script src="vendors/jquery.min.js" charset="utf-8"></script>
     <script src="scripts/script.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="vendors/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <div class="container">
-      <h1>To Do Application</h1>
-      <input type="text" id="taskIn" name="taskIn" value="" placeholder="task">
-      <button type="button" id="testBtn" class="btn" name="testBtn">test button</button>
+      <h1>Task Tracker</h1>
+      <form id="taskForm">
+          <label for="taskIn">Add New Task:</label>
+          <input type="text" id="taskIn" name="taskIn" value="" placeholder="task">
+        <button type="button" name="addTaskButton" id="addTaskButton" class="submit">ADD</button>
+      </form>
+
+      <table id="taskTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Created</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="outputTable"></tbody>
+        <tbody id="completedTable"></tbody>
+      </table>
     </div>
   </body>
 </html>

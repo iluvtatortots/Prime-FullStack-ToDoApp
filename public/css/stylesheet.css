@@ -1,0 +1,103 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding: 2px 60px;
+  background-color: #d6dbdf;
+}
+
+.container {
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+h1 {
+  background-color: #2f4154;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+#completedTable tr {
+  opacity: 0.40;
+}
+
+#taskTable {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+#taskTable th {
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #2f4154;
+  border-top: 4px solid #1abc9c;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
+}
+
+#taskTable td {
+  background: #d6dbdf;
+  border-bottom: 1px solid #fff;
+  color: #000;
+  border-top: 1px solid transparent;
+  padding: 8px;
+}
+
+
+input[type="text"] {
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+  line-height: 1.467;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: #fff;
+
+}
+
+select {
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+  line-height: 1.467;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+button {
+    background-color: #1abc9c;
+    border: none;
+    color: white;
+    padding: 8px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2f4154;
+}
+
+.submit {
+  line-height: 1.467;
+  padding: 8px 12px;
+}
