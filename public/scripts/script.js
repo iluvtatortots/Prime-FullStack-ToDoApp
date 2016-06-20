@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   // target button with enter key
   $('#taskIn').keypress(function(event){
-    if(event.keyCode == 13){
+    if(event.keyCode == 13){ // keyCode for enter key
       $('#addTaskButton').click();
     }
   }); // end target button
@@ -101,13 +101,15 @@ $(document).ready(function(){
       var completeButton = '<button id="completeButton" data-id="'+ tasksToDo[i].id +'" data-status="'+ tasksToDo[i].status +'">Complete</button>';
       var deleteButton = '<button id="deleteButton" data-id="'+ tasksToDo[i].id +'">Delete</button></td>';
       if(tasksToDo[i].status === false) {
-        var taskRow = '<tr id="taskRow"><td>' + tasksToDo[i].id + '</td>' +
+        var taskRow = '<tr id="taskRow"><td><input type="checkbox" id="checkOff"></td>' +
+        '<td>' + tasksToDo[i].id + '</td>' +
         '<td>' + tasksToDo[i].task + '</td>' +
         '<td>' + tasksToDo[i].created + '</td>' +
         '<td>' + completeButton + deleteButton + '</td></tr>';
         $('#outputTable').append(taskRow);
       } else {
-        var doneTaskRow = '<tr id="taskRow"><td>' + tasksToDo[i].id + '</td>' +
+        var doneTaskRow = '<tr id="taskRow"><td><input type="checkbox" id="checkOff"></td>' +
+        '<td>' + tasksToDo[i].id + '</td>' +
         '<td>' + tasksToDo[i].task + '</td>' +
         '<td>' + tasksToDo[i].created + '</td>' +
         '<td>' + deleteButton + '</td></tr>';

@@ -22,7 +22,6 @@ app.get('/', function(req, res){
 
 // send new task to DB
 app.post('/createTask', urlencodedParser, function(req, res){
-  console.log('in createTask, task: ' + req.body.task);
   pg.connect(connectionString, function(err, client, done){
     var sendTask = client.query('INSERT INTO todolist (task, status) VALUES ($1, $2)', [req.body.task, req.body.status]);
     sendTask.on('end', function(){
