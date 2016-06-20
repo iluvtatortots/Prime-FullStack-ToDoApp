@@ -9,12 +9,15 @@
   </head>
   <body>
     <div class="container">
-      <h1>Task Tracker</h1>
-      <form id="taskForm">
-          <label for="taskIn">Add New Task:</label>
-          <input type="text" id="taskIn" name="taskIn" value="" placeholder="task">
-        <button type="button" name="addTaskButton" id="addTaskButton" class="submit">ADD</button>
-      </form>
+      <h1>Tasks To Get Done</h1>
+      <div class="top">
+        <p id="currentDate"></p>
+        <form id="taskForm">
+            <input type="text" id="taskIn" name="taskIn" value="" placeholder="Enter New Task">
+          <button type="button" name="addTaskButton" id="addTaskButton" class="submit">Add New Task</button>
+        </form>
+      </div>
+      <div class="clearfloat"></div>
 
       <table id="taskTable">
         <thead>

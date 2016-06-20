@@ -1,7 +1,14 @@
 $(document).ready(function(){
 
   // load tasks
-  loadTasks();
+    loadTasks();
+    currentDate();
+
+    // current date to display to DOM
+    function currentDate(){
+      var d = new Date();
+      document.getElementById('currentDate').innerHTML = d.toDateString();
+    } // end current date
 
   // target button with enter key
   $('#taskIn').keypress(function(event){
@@ -91,8 +98,8 @@ $(document).ready(function(){
     $('#outputTable').empty();
     $('#completedTable').empty();
     for(i=0; i<tasksToDo.length; i++){
-      var completeButton = '<button id="completeButton" data-id="'+ tasksToDo[i].id +'" data-status="'+ tasksToDo[i].status +'">complete</button>';
-      var deleteButton = '<button id="deleteButton" data-id="'+ tasksToDo[i].id +'">delete</button></td>';
+      var completeButton = '<button id="completeButton" data-id="'+ tasksToDo[i].id +'" data-status="'+ tasksToDo[i].status +'">Complete</button>';
+      var deleteButton = '<button id="deleteButton" data-id="'+ tasksToDo[i].id +'">Delete</button></td>';
       if(tasksToDo[i].status === false) {
         var taskRow = '<tr id="taskRow"><td>' + tasksToDo[i].id + '</td>' +
         '<td>' + tasksToDo[i].task + '</td>' +
