@@ -2,16 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>To Do Application</title>
-    <script src="vendors/jquery.min.js" charset="utf-8"></script>
+    <title>Results Communicators Toastmaster Club</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="scripts/script.js" charset="utf-8"></script>
     <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <div class="container">
-      <h1>Tasks To Get Done</h1>
+      <h1><img src="images/Logo.png" alt="logo" height="42" width="50"> Results Communicators Toastmasters Club</h1>
       <div class="top">
-        <p id="currentDate"></p>
+        <div ng-app="">
+          <p ng-bind = "date"></p>
+        </div>
         <form id="taskForm">
             <input type="text" id="taskIn" name="taskIn" value="" placeholder="Enter New Task">
           <button type="button" name="addTaskButton" id="addTaskButton" class="submit">Add New Task</button>
